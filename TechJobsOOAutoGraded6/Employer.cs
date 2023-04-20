@@ -1,15 +1,15 @@
 ﻿using System;
 namespace TechJobsOOAutoGraded6
 {
-	public class Employer
-	{
+    public class Employer
+    {
         public int Id { get; }
         private static int nextId = 1;
         public string Value { get; set; }
 
         public Employer()
         {
-            Id = nextId;
+            Id = nextId++;
             nextId++;
         }
 
@@ -17,7 +17,6 @@ namespace TechJobsOOAutoGraded6
         {
             Value = value;
         }
-
         public override bool Equals(object obj)
         {
             return obj is Employer employer &&

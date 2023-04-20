@@ -1,4 +1,6 @@
 ﻿
+using TechJobs.Tests;
+
 namespace TechJobsOO.Tests
 {
 	[TestClass]
@@ -7,8 +9,7 @@ namespace TechJobsOO.Tests
         //Task 5 Tests used to verify that students are testing their custom ToString method.
         //Uses jobs from the Job class.
         //Tests are numbered.
-
-        /*TODO: Task 5: Remove this line to uncomment the tests
+       
 
         //Unit Test 1:  TestToStringStartsAndEndsWithNewLine  -----------------------
 
@@ -39,13 +40,13 @@ namespace TechJobsOO.Tests
 
 
         [TestMethod]  //2
-        public void Test_TestToString_Starts_And_Ends_With_NewLine()
+        public void TestTestToStringStartsAndEndsWithNewLine()
         {
             //comparing output to a text file.
             //id numbers may get a little wonky
 
             //setup
-            string text = System.IO.File.ReadAllText("StartsAndEndsWithNewLine.txt").ToString();
+            string text = System.IO.File.ReadAllText("C:\\Users\\ntnic\\Desktop\\LC101C#\\Projects&Assignments\\Tech Jobs\\TechJobsOO.Tests\\StartsAndEndsWithNewLine.txt").ToString();
             var stringWriter = new StringWriter();
             Console.SetOut(stringWriter);
             var job = new RunTechJobs();
@@ -55,6 +56,8 @@ namespace TechJobsOO.Tests
             //verify
             Assert.AreEqual(text, output, "New Line issue");
         }
+
+
 
         //Unit Test 2: TestToStringContainsCorrectLabelsAndData -----------------------
 
@@ -130,12 +133,12 @@ namespace TechJobsOO.Tests
 
 
         [TestMethod] //6
-        public void Test_TestToStringHandlesEmptyField()
+        public void TestTestToStringHandlesEmptyField()
         {
             //comparing output to a text file.
             //id numbers may get a little wonky
 
-            string text = System.IO.File.ReadAllText("EmptyFieldTest.txt").ToString();
+            string text = System.IO.File.ReadAllText("C:\\Users\\ntnic\\Desktop\\LC101C#\\Projects&Assignments\\Tech Jobs\\TechJobsOO.Tests\\EmptyFieldTest.txt").ToString();
             var stringWriter = new StringWriter();
             Console.SetOut(stringWriter);
             var job = new RunTechJobs();
@@ -144,8 +147,7 @@ namespace TechJobsOO.Tests
 
             //verify
             Assert.AreEqual(text, output, "Empty string handling error");
-        }
-        TODO: Task 5: Remove this line to uncomment the tests*/
+        }       
 
     }
 
