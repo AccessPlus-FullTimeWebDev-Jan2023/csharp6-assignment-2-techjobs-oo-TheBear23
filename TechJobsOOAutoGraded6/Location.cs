@@ -1,12 +1,8 @@
 ﻿using System;
 namespace TechJobsOOAutoGraded6
 {
-	public class Location 
-	{
-        public int Id { get; }
-        private static int nextId = 1;
-        public string Value { get; set; }
-
+	public class Location : JobField
+    {
 
         // TODO: Task 2: Add a second constructor to this class that uses the Location() constructor and sets the value of the value field.
 
@@ -16,16 +12,11 @@ namespace TechJobsOOAutoGraded6
         //The Value property is set using value of value parameter passed to the constructor - Value property was set with the value parameter to allow the caller to specify the location value during object initialization.
         //*This constructor allows Location objects to be created with a specified location value while still ensuring that each object has a unique ID.
  
-        public Location()
+        public Location(string value) : base(value)
         {
-            Id = nextId;
-            nextId++;
+           
         }
 
-        public Location(string value) : this()
-        {
-            Value = value;
-        }
         public override bool Equals(object obj)
         {
             return obj is Location location &&

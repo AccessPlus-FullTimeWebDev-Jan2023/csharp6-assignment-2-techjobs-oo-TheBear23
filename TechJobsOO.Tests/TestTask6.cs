@@ -1,4 +1,4 @@
-﻿/*namespace TechJobsOO.Tests
+﻿namespace TechJobsOO.Tests
 {
 	[TestClass]
 	public class TestTask6
@@ -85,4 +85,4 @@
         
     }
 }
-        */
+        
